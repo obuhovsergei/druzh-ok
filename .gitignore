@@ -1,0 +1,13 @@
+# Общие
+node_modules/
+.env
+.DS_Store
+dist/
+*.log
+
+# MongoDB
+data/db
+
+# IDE
+.vscode/
+.idea/
