@@ -1,9 +1,9 @@
 export interface IUser {
   email: string;
-  password: string;
+  password?: string;
   firstName: string;
   lastName: string;
-  role: 'owner' | 'walker';
+  role?: TUserRole;
   address?: {
     street: string;
     city: string;
@@ -11,4 +11,9 @@ export interface IUser {
   };
   pricePerHour?: number;
   rating?: number;
+}
+
+export enum TUserRole {
+  OWNER = 'owner',
+  WALKER = 'walker'
 }
