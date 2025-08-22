@@ -1,4 +1,5 @@
 export enum RouteNames {
   home = "home",
-  auth = "auth"
+  login = "login",
+  sign = "sign"
 }

@@ -3,7 +3,7 @@ export interface IUser {
   password?: string;
   firstName: string;
   lastName: string;
-  role?: 'owner' | 'walker';
+  role?: TUserRole;
   address?: {
     street: string;
     city: string;
@@ -13,4 +13,7 @@ export interface IUser {
   rating?: number;
 }
 
-export type TLogin = Pick<IUser, "email" | "password">;
+export enum TUserRole {
+  OWNER = 'owner',
+  WALKER = 'walker'
+}

@@ -11,17 +11,25 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/',
         name: 'Home',
-        redirect: { name: RouteNames.auth},
+        redirect: { name: RouteNames.login},
         meta: {
             title: 'Home page'
         },
         children: [
             {
-                path: '/auth',
-                name: RouteNames.auth,
+                path: '/login',
+                name: RouteNames.login,
                 component: () => import('../views/AuthView.vue'),
                 meta: {
                     title: 'Auth page'
+                }
+            },
+            {
+                path: '/sign',
+                name: RouteNames.sign,
+                component: () => import('../views/RegistrationView.vue'),
+                meta: {
+                    title: 'Registration page'
                 }
             }
         ]
