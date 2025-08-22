@@ -11,6 +11,8 @@ import 'primeflex/primeflex.css'
 
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
+import Card from 'primevue/card'
+import Password from 'primevue/password'
 
 const app = createApp(App)
 
@@ -20,5 +22,7 @@ app.use(PrimeVue)
 
 app.component('InputText', InputText)
 app.component('Button', Button)
+app.component('Card', Card)
+app.component('Password', Password)
 
 app.mount('#app')

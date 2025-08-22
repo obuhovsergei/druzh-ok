@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import authRoutes from '@/routes/auth.routes';
-import dogsRoutes from '@/routes/dogs.routes';
 import { errorHandler } from '@/middlewares/error-handler';
 
 const app = express();
@@ -14,8 +13,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/dogs', dogsRoutes);
+const api_prefix = process.env.API_ROUTE_PREFIX || 'api'
+app.use(`/${api_prefix}/auth`, authRoutes);
 
 // Error handler
 app.use(errorHandler);
